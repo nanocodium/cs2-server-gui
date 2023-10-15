@@ -1,0 +1,10 @@
+C:\Users\nano\Desktop\s\cs2servergui\bin\Debug\cs2servergui.exe.config
+C:\Users\nano\Desktop\s\cs2servergui\bin\Debug\cs2servergui.exe
+C:\Users\nano\Desktop\s\cs2servergui\bin\Debug\cs2servergui.pdb
+C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.csproj.AssemblyReference.cache
+C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.Properties.Resources.resources
+C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.csproj.GenerateResource.cache
+C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.csproj.CoreCompileInputs.cache
+C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.exe
+C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.pdb
+C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.Form1.resources
