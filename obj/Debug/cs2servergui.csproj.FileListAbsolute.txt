@@ -8,3 +8,4 @@ C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.csproj.CoreCompileIn
 C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.exe
 C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.pdb
 C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.Form1.resources
+C:\Users\nano\Desktop\s\cs2servergui\obj\Debug\cs2servergui.Form2.resources

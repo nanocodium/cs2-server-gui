@@ -11,6 +11,7 @@ namespace cs2servergui
         public Form1()
         {
             InitializeComponent();
+            Global.cs2_map_file = null;
             Global.cs2_path = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\game\\bin\\win64\\cs2.exe";
             label2.Text = Global.cs2_path;
         }
@@ -18,8 +19,8 @@ namespace cs2servergui
         {
             public static int game_mode;
             public static int game_type;
-            public static string map;
             public static string cs2_path;
+            public static string cs2_map_file;
             public static string cs2_srv_args;
         }
         private void start_btn_Click(object sender, EventArgs e)
@@ -35,11 +36,14 @@ namespace cs2servergui
                 }
                 else
                 {
-                    Global.cs2_srv_args = " -dedicated -insecure " + "+game_mode " + Global.game_mode + " +game_type " + Global.game_type + " +map " + Global.map;
+                    Global.cs2_srv_args = " -dedicated -insecure " + "+game_mode " + Global.game_mode + " +game_type " + Global.game_type + " +map " + Global.cs2_map_file;
                     Process p = new Process();
                     p.StartInfo.FileName = Global.cs2_path;
                     p.StartInfo.Arguments = Global.cs2_srv_args;
                     p.Start();
+                    
+                    
+                    
                 }
             }
             catch (Exception ex)
@@ -55,11 +59,6 @@ namespace cs2servergui
         private void game_type_SelectedIndexChanged(object sender, EventArgs e)
         {
             Global.game_type = Convert.ToInt32(game_type_sel.SelectedIndex.ToString());
-        }
-
-        private void map_sel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Global.map = map_sel.SelectedItem.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,16 +84,24 @@ namespace cs2servergui
             }
         }
 
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
             form2.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            openFileDialog2.InitialDirectory = "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\game\\csgo\\maps";
+            openFileDialog2.Filter = "*.vpk |*.vpk|All files (*.*)|*.*";
+            openFileDialog2.FilterIndex = 1;
+
+            if (openFileDialog2.ShowDialog() == DialogResult.OK)
+            {
+                //Get the path of cs2.exe
+                Global.cs2_map_file = '"' + openFileDialog2.FileName + '"'; 
+                label3.Text = Global.cs2_map_file;
+            }
         }
     }
 }
